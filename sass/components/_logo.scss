@@ -14,6 +14,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
   .logo__header {
     padding-top: 26px;
     padding-bottom: 26px;

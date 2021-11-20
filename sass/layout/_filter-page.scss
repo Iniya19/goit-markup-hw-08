@@ -1,5 +1,5 @@
 .filter {
-  display: flex;
+  display: none;
   justify-content: center;
   margin-bottom: 50px;
   &__item:not(:last-child) {

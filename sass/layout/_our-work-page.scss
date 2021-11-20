@@ -11,7 +11,7 @@
   color: $first-color;
 }
 .our-work {
-  display: flex;
+  display: none;
 }
 .our-work__item:not(:last-child) {
   margin-right: 30px;
