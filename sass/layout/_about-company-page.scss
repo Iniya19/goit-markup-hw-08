@@ -1,7 +1,4 @@
 @media screen and (max-width: 767px) {
-  .about-company {
-    display: flex;
-  }
   .about-company__item {
     &:not(:last-child) {
       margin-bottom: 30px;
@@ -32,11 +29,57 @@
     color: $first-color;
   }
   .about-company__text {
-    width: 270px;
+    width: 450px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-align: center;
+    color: $second-color;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-company {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-company__item {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+  .about-company__item {
+    &:nth-child(2n) {
+      margin-bottom: 30px;
+    }
+  }
+  .about-company__icon {
+    width: 70px;
+    height: 70px;
+  }
+  .about-company__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 354px;
+    height: 120px;
+    background-color: $bcg-color;
+    border-radius: 4px;
+  }
+  .about-company__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $first-color;
+  }
+  .about-company__text {
+    width: 354px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
     color: $second-color;
   }
 }

@@ -1,68 +1,219 @@
-.section--grey-background {
-  background-color: $bcg-color;
-}
-.our-team {
-  display: none;
-}
-.our-team__item {
-  background-color: $buttom-text-color;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  text-align: center;
-}
-.our-team__item:not(:last-child) {
-  margin-right: 30px;
-}
-.our-team__box {
-  padding: 30px 0px;
-  border: 1px solid $border-second-color;
-}
-.our-team__title {
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 0.03em;
-  color: $first-color;
-  text-align: center;
-}
-.our-team__text {
-  margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.18;
-  letter-spacing: 0.03em;
-  color: $second-color;
-  text-align: center;
-}
-.socials-holder {
-  display: inline-flex;
-  align-content: center;
-}
-.socials-holder__list {
-  margin-right: 10px;
-}
-.socials-holder__list:not(:last-child) {
-  margin-right: 10px;
-}
-.socials-holder__icon {
-  width: 20px;
-  height: 20px;
-}
-.socials-holder__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  fill: #afb1b8;
-  transition: fill $animation-timing-function $animation-duration,
-    background-color $animation-timing-function $animation-duration;
+@media screen and (max-width: 767px) {
+  .section--grey-background {
+    background-color: $bcg-color;
+  }
+  .our-team__item {
+    width: 450px;
+    background-color: $buttom-text-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .our-team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .our-team__box {
+    padding: 30px 0px;
+    border: 1px solid $border-second-color;
+  }
+  .our-team__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $first-color;
+    text-align: center;
+  }
+  .our-team__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $second-color;
+    text-align: center;
+  }
+  .socials-holder {
+    display: inline-flex;
+    align-content: center;
+  }
+  .socials-holder__list {
+    margin-right: 10px;
+  }
+  .socials-holder__list:not(:last-child) {
+    margin-right: 10px;
+  }
+  .socials-holder__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .socials-holder__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: fill $animation-timing-function $animation-duration,
+      background-color $animation-timing-function $animation-duration;
 
-  &:hover,
-  &:focus {
-    fill: $buttom-text-color;
-    background-color: $title-first-color;
+    &:hover,
+    &:focus {
+      fill: $buttom-text-color;
+      background-color: $title-first-color;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .section--grey-background {
+    background-color: $bcg-color;
+  }
+  .our-team {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .our-team__item {
+    width: 354px;
+    background-color: $buttom-text-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .our-team__item {
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  }
+  .our-team__item {
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+  .our-team__box {
+    padding: 30px 0px;
+    border: 1px solid $border-second-color;
+  }
+  .our-team__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $first-color;
+    text-align: center;
+  }
+  .our-team__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $second-color;
+    text-align: center;
+  }
+  .socials-holder {
+    display: inline-flex;
+    align-content: center;
+  }
+  .socials-holder__list {
+    margin-right: 10px;
+  }
+  .socials-holder__list:not(:last-child) {
+    margin-right: 10px;
+  }
+  .socials-holder__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .socials-holder__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: fill $animation-timing-function $animation-duration,
+      background-color $animation-timing-function $animation-duration;
+
+    &:hover,
+    &:focus {
+      fill: $buttom-text-color;
+      background-color: $title-first-color;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section--grey-background {
+    background-color: $bcg-color;
+  }
+  .our-team {
+    display: flex;
+  }
+  .our-team__item {
+    width: 270px;
+    background-color: $buttom-text-color;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .our-team__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .our-team__box {
+    padding: 30px 0px;
+    border: 1px solid $border-second-color;
+  }
+  .our-team__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: $first-color;
+    text-align: center;
+  }
+  .our-team__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $second-color;
+    text-align: center;
+  }
+  .socials-holder {
+    display: inline-flex;
+    align-content: center;
+  }
+  .socials-holder__list {
+    margin-right: 10px;
+  }
+  .socials-holder__list:not(:last-child) {
+    margin-right: 10px;
+  }
+  .socials-holder__icon {
+    width: 20px;
+    height: 20px;
+  }
+  .socials-holder__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+    transition: fill $animation-timing-function $animation-duration,
+      background-color $animation-timing-function $animation-duration;
+
+    &:hover,
+    &:focus {
+      fill: $buttom-text-color;
+      background-color: $title-first-color;
+    }
   }
 }

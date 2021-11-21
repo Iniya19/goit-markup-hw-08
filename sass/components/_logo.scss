@@ -48,9 +48,24 @@
 .logo__studio {
   color: $title-second-color;
 }
-.logo__bottom {
-  margin-bottom: 20px;
+@media screen and (min-width: 480px) {
+  .logo__bottom {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
+@media screen and (min-width: 768px) {
+  .logo__bottom {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__bottom {
+    margin-bottom: 20px;
+  }
+}
+
 .logo__studio-footer {
   color: $buttom-text-color;
 }

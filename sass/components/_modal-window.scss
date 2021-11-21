@@ -1,171 +1,521 @@
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  transition-property: opacity, scale;
-  transition: $animation-timing-function $animation-duration;
+@media screen and (min-width: 480px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition-property: opacity, scale;
+    transition: $animation-timing-function $animation-duration;
 
-  &.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+    &.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
   }
-}
-.modal {
-  position: absolute;
-  padding: 40px;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  height: 581px;
-  background-color: $buttom-text-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform $animation-timing-function $animation-duration;
+  .modal {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    background-color: $buttom-text-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $animation-timing-function $animation-duration;
 
-  .backdrop.is-hidden & {
-    transform: translate(-50%, -50%) scale(1.5);
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
   }
-}
-.modal-title {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: $first-color;
-}
-.modal-form__lable {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  text-align: left;
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.01em;
-  color: $second-color;
-}
-.modal-form__input {
-  margin-top: 4px;
-  padding: 11px 0px 11px 42px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  transition: border $animation-timing-function $animation-duration;
-
-  .modal-form__lable:focus-within > & {
-    outline: none;
-    border-color: $title-first-color;
+  .modal-title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $first-color;
   }
-}
-.modal-form__icon {
-  position: absolute;
-  display: inline-block;
-  left: 12px;
-  top: 50%;
-  fill: $title-second-color;
-  transition: fill $animation-timing-function $animation-duration;
-
-  .modal-form__lable:focus-within > & {
-    outline: none;
-    fill: $title-first-color;
-  }
-}
-.modal-form__comment-area {
-  margin-bottom: 20px;
-}
-.modal-form__comment {
-  padding: 12px 16px;
-  margin-top: 4px;
-  height: 120px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-  resize: none;
-  transition: border $animation-timing-function $animation-duration,
-    color $animation-timing-function $animation-duration;
-
-  &:focus {
-    outline: none;
-    border: 1px solid $title-first-color;
-  }
-  &::placeholder {
+  .modal-form__lable {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: left;
     font-size: 12px;
-    line-height: 1.14;
+    line-height: 1.167;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    color: $second-color;
+  }
+  .modal-form__input {
+    margin-top: 4px;
+    padding: 11px 0px 11px 42px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border $animation-timing-function $animation-duration;
+
+    .modal-form__lable:focus-within > & {
+      outline: none;
+      border-color: $title-first-color;
+    }
+  }
+  .modal-form__icon {
+    position: absolute;
+    display: inline-block;
+    left: 12px;
+    top: 50%;
+    fill: $title-second-color;
+    transition: fill $animation-timing-function $animation-duration;
+
+    .modal-form__lable:focus-within > & {
+      outline: none;
+      fill: $title-first-color;
+    }
+  }
+  .modal-form__comment-area {
+    margin-bottom: 20px;
+  }
+  .modal-form__comment {
+    padding: 12px 16px;
+    margin-top: 4px;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    transition: border $animation-timing-function $animation-duration,
+      color $animation-timing-function $animation-duration;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $title-first-color;
+    }
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  .modal-form__checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: $second-color;
+  }
+  .modal-form__icon-tick {
+    display: flex;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-second-color;
+    border-radius: 2px;
+
+    .modal-form__checkbox:checked + & {
+      background-origin: border-box;
+      background-color: $title-first-color;
+      background-image: url(../images/tick.svg);
+      background-size: contain;
+      border-color: $title-first-color;
+    }
+  }
+
+  .modal-form__link {
+    text-decoration-line: underline;
+    color: $title-first-color;
+  }
+  .modal-form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-form__button-submit {
+    transition: color $animation-timing-function $animation-duration;
+  }
+  .modal-form__button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $buttom-text-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill $animation-timing-function $animation-duration;
+
+    &:hover {
+      fill: $title-first-color;
+    }
+  }
+  .modal-form__icon-close {
+    width: 18px;
+    height: 18px;
   }
 }
+@media screen and (min-width: 768px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition-property: opacity, scale;
+    transition: $animation-timing-function $animation-duration;
 
-.modal-form__checkbox-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $second-color;
-}
-.modal-form__icon-tick {
-  display: flex;
-  margin-right: 8px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid $title-second-color;
-  border-radius: 2px;
+    &.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  .modal {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    background-color: $buttom-text-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $animation-timing-function $animation-duration;
 
-  .modal-form__checkbox:checked + & {
-    background-origin: border-box;
-    background-color: $title-first-color;
-    background-image: url(../images/tick.svg);
-    background-size: contain;
-    border-color: $title-first-color;
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+  .modal-title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $first-color;
+  }
+  .modal-form__lable {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: $second-color;
+  }
+  .modal-form__input {
+    margin-top: 4px;
+    padding: 11px 0px 11px 42px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border $animation-timing-function $animation-duration;
+
+    .modal-form__lable:focus-within > & {
+      outline: none;
+      border-color: $title-first-color;
+    }
+  }
+  .modal-form__icon {
+    position: absolute;
+    display: inline-block;
+    left: 12px;
+    top: 50%;
+    fill: $title-second-color;
+    transition: fill $animation-timing-function $animation-duration;
+
+    .modal-form__lable:focus-within > & {
+      outline: none;
+      fill: $title-first-color;
+    }
+  }
+  .modal-form__comment-area {
+    margin-bottom: 20px;
+  }
+  .modal-form__comment {
+    padding: 12px 16px;
+    margin-top: 4px;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    transition: border $animation-timing-function $animation-duration,
+      color $animation-timing-function $animation-duration;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $title-first-color;
+    }
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  .modal-form__checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    color: $second-color;
+  }
+  .modal-form__icon-tick {
+    display: flex;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-second-color;
+    border-radius: 2px;
+
+    .modal-form__checkbox:checked + & {
+      background-origin: border-box;
+      background-color: $title-first-color;
+      background-image: url(../images/tick.svg);
+      background-size: contain;
+      border-color: $title-first-color;
+    }
+  }
+
+  .modal-form__link {
+    text-decoration-line: underline;
+    color: $title-first-color;
+  }
+  .modal-form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-form__button-submit {
+    transition: color $animation-timing-function $animation-duration;
+  }
+  .modal-form__button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $buttom-text-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill $animation-timing-function $animation-duration;
+
+    &:hover {
+      fill: $title-first-color;
+    }
+  }
+  .modal-form__icon-close {
+    width: 18px;
+    height: 18px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition-property: opacity, scale;
+    transition: $animation-timing-function $animation-duration;
 
-.modal-form__link {
-  text-decoration-line: underline;
-  color: $title-first-color;
-}
-.modal-form__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.modal-form__button-submit {
-  transition: color $animation-timing-function $animation-duration;
-}
-.modal-form__button-close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background: $buttom-text-color;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: fill $animation-timing-function $animation-duration;
-
-  &:hover {
-    fill: $title-first-color;
+    &.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
   }
-}
-.modal-form__icon-close {
-  width: 18px;
-  height: 18px;
+  .modal {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    background-color: $buttom-text-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $animation-timing-function $animation-duration;
+
+    .backdrop.is-hidden & {
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+  .modal-title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $first-color;
+  }
+  .modal-form__lable {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: $second-color;
+  }
+  .modal-form__input {
+    margin-top: 4px;
+    padding: 11px 0px 11px 42px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    transition: border $animation-timing-function $animation-duration;
+
+    .modal-form__lable:focus-within > & {
+      outline: none;
+      border-color: $title-first-color;
+    }
+  }
+  .modal-form__icon {
+    position: absolute;
+    display: inline-block;
+    left: 12px;
+    top: 50%;
+    fill: $title-second-color;
+    transition: fill $animation-timing-function $animation-duration;
+
+    .modal-form__lable:focus-within > & {
+      outline: none;
+      fill: $title-first-color;
+    }
+  }
+  .modal-form__comment-area {
+    margin-bottom: 20px;
+  }
+  .modal-form__comment {
+    padding: 12px 16px;
+    margin-top: 4px;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;
+    transition: border $animation-timing-function $animation-duration,
+      color $animation-timing-function $animation-duration;
+
+    &:focus {
+      outline: none;
+      border: 1px solid $title-first-color;
+    }
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.14;
+      letter-spacing: 0.01em;
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+
+  .modal-form__checkbox-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $second-color;
+  }
+  .modal-form__icon-tick {
+    display: flex;
+    margin-right: 8px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-second-color;
+    border-radius: 2px;
+
+    .modal-form__checkbox:checked + & {
+      background-origin: border-box;
+      background-color: $title-first-color;
+      background-image: url(../images/tick.svg);
+      background-size: contain;
+      border-color: $title-first-color;
+    }
+  }
+
+  .modal-form__link {
+    text-decoration-line: underline;
+    color: $title-first-color;
+  }
+  .modal-form__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-form__button-submit {
+    transition: color $animation-timing-function $animation-duration;
+  }
+  .modal-form__button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: $buttom-text-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill $animation-timing-function $animation-duration;
+
+    &:hover {
+      fill: $title-first-color;
+    }
+  }
+  .modal-form__icon-close {
+    width: 18px;
+    height: 18px;
+  }
 }
