@@ -827,7 +827,7 @@ a {
   color: #000000;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .logo__bottom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -839,9 +839,11 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .logo__bottom {
-    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
   }
 }
 
@@ -1652,7 +1654,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .section--grey-background {
     background-color: #f5f4fa;
   }
@@ -1960,9 +1962,6 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   /*footer-contacts*/
   .adress {
@@ -2063,6 +2062,9 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
   .footer-form__label {
@@ -2107,11 +2109,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px 29px;
     width: 200px;
     height: 50px;
@@ -2124,9 +2124,8 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-section {
-    display: none;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #2f303a;
@@ -2135,18 +2134,20 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   /*footer-contacts*/
   .footer-contacts {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    display: inline-block;
+    text-align: center;
   }
   .adress {
     font-style: normal;
+    margin-bottom: 60px;
   }
   .adress__item:not(:last-child) {
     margin-bottom: 9px;
@@ -2167,7 +2168,13 @@ a {
   }
   /*footer-links*/
   .footer-links {
-    margin-right: 93px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .footer-links__text {
     margin-bottom: 20px;
@@ -2175,6 +2182,7 @@ a {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     color: white;
   }
   .footer-social {
@@ -2222,21 +2230,32 @@ a {
     background-color: #2196f3;
   }
   /*footer-form*/
+  .footer-form_block {
+    margin: 0 auto;
+  }
   .footer-form__title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     color: white;
   }
   .footer-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer-form__label {
-    margin-right: 12px;
+    margin-bottom: 20px;
   }
   .footer-form__field {
     padding: 15px 16px;
@@ -2294,7 +2313,9 @@ a {
 
 @media screen and (min-width: 1200px) {
   .footer-section {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #2f303a;
@@ -2402,6 +2423,9 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer-form__label {
     margin-right: 12px;
