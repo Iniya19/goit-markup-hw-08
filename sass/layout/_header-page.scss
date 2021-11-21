@@ -2,7 +2,10 @@
   .header {
     border-bottom: 1px solid $border-color;
   }
-  .mobile-header {
+  .container__header {
+    display: none;
+  }
+  .mobile-bar {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -125,128 +128,19 @@
     color: $title-first-color;
   }
 }
-
 @media screen and (min-width: 768px) {
   .header {
     border-bottom: 1px solid $border-color;
   }
+  .mobile-bar {
+    display: none;
+  }
   .container__header {
     display: flex;
     align-items: center;
-  }
-  .mobile-header {
-    margin-right: 88px;
-  }
-  .mobile-header__button {
-    display: none;
-  }
-  .mobile-menu {
-    display: flex;
-    align-items: center;
-  }
-  .mobile-menu__button {
-    display: none;
   }
   .site-nav {
     display: flex;
-    margin-right: 65px;
-  }
-  .site-nav__item {
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-  }
-  .site-nav__link,
-  .site-nav__link-current {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    list-style-type: none;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    color: $first-color;
-    transition: color $animation-duration $animation-timing-function;
-
-    &:hover,
-    &:focus {
-      color: $title-first-color;
-    }
-  }
-
-  .site-nav__link-current {
-    position: relative;
-    color: $title-first-color;
-
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      left: 0;
-      bottom: 0;
-      height: 4px;
-      width: 100%;
-      background-color: $title-first-color;
-      border-radius: 2px;
-    }
-  }
-  .contacts {
-    display: flex;
-    flex-direction: column;
-  }
-  .contacts__item {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    list-style-type: none;
-  }
-  .contacts__link {
-    display: flex;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: $second-color;
-    transition: color $animation-duration $animation-timing-function;
-
-    &:hover,
-    &:focus {
-      color: $title-first-color;
-    }
-  }
-  .contacts__icon {
-    margin-right: 8px;
-    fill: currentColor;
-    transition: fill $animation-duration $animation-timing-function;
-
-    &:hover,
-    &:focus {
-      fill: currentColor;
-    }
-  }
-  .social-mobile {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header {
-    border-bottom: 1px solid $border-color;
-  }
-  .container__header {
-    display: flex;
-    align-items: center;
-  }
-  .mobile-menu {
-    display: flex;
-    justify-content: space-between;
-  }
-  .mobile-header {
-    margin-right: 0;
-  }
-  .nav {
-    display: flex;
-    margin-right: 0;
   }
   .site-nav__item {
     &:not(:last-child) {
@@ -290,8 +184,98 @@
   }
   .contacts {
     display: flex;
+    flex-direction: column;
     margin-left: auto;
+  }
+  .contacts__item {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    list-style-type: none;
+  }
+  .contacts__link {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: $second-color;
+    transition: color $animation-duration $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      color: $title-first-color;
+    }
+  }
+  .contacts__icon {
+    margin-right: 8px;
+    fill: currentColor;
+    transition: fill $animation-duration $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      fill: currentColor;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    border-bottom: 1px solid $border-color;
+  }
+  .mobile-bar {
+    display: none;
+  }
+  .container__header {
+    display: flex;
+    align-items: center;
+  }
+  .site-nav {
+    display: flex;
+  }
+  .site-nav__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .site-nav__link,
+  .site-nav__link-current {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1, 14;
+    letter-spacing: 0.02em;
+    list-style-type: none;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $first-color;
+    transition: color $animation-duration $animation-timing-function;
+
+    &:hover,
+    &:focus {
+      color: $title-first-color;
+    }
+  }
+
+  .site-nav__link-current {
+    position: relative;
+    color: $title-first-color;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      background-color: $title-first-color;
+      border-radius: 2px;
+    }
+  }
+  .contacts {
+    display: flex;
     flex-direction: row;
+    margin-left: auto;
   }
   .contacts__item {
     font-weight: 500;
