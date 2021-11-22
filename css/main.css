@@ -49,9 +49,9 @@ a {
   margin-right: auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .container {
-    width: 480px;
+    width: 320px;
   }
 }
 
@@ -67,7 +67,7 @@ a {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .section {
     padding: 60px 0;
   }
@@ -397,7 +397,7 @@ a {
   letter-spacing: 0.03em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .logo {
     font-size: 24px;
     line-height: 1.16;
