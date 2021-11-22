@@ -1754,18 +1754,12 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .projects__item {
-    width: 450px;
-  }
   .projects__item:not(last-child) {
     margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .projects__item {
-    width: 354px;
-  }
   .projects__item:nth-child(2n + 1) {
     margin-right: 30px;
   }
@@ -1775,9 +1769,6 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-  .projects__item {
-    width: 370px;
-  }
   .projects__item:not(:nth-child(3n)) {
     margin-right: 30px;
   }
