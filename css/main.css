@@ -972,12 +972,6 @@ a {
   .about-company__item:not(:last-child) {
     margin-bottom: 30px;
   }
-  .about-company__box {
-    width: 450px;
-  }
-  .about-company__text {
-    width: 450px;
-  }
 }
 
 @media screen and (min-width: 768px) {
