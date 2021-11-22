@@ -44,16 +44,6 @@
   transition: fill $animation-timing-function $animation-duration,
     border $animation-timing-function $animation-duration;
 
-  @media screen and (max-width: 767px) {
-    width: 210px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 226px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 170px;
-  }
-
   &:hover,
   &:focus {
     fill: $title-first-color;
