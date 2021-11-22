@@ -1249,10 +1249,6 @@ a {
   }
 }
 
-.our-cusromers__items {
-  width: auto;
-}
-
 @media screen and (max-width: 767px) {
   .our-cusromers__items:nth-child(2n + 1) {
     margin-right: 30px;
