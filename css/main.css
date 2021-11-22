@@ -42,7 +42,6 @@ a {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -51,7 +50,7 @@ a {
 
 @media screen and (max-width: 767px) {
   .container {
-    width: 480px;
+    width: 320px;
   }
 }
 
