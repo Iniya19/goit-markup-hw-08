@@ -1,391 +1,201 @@
-@media screen and (max-width: 767px) {
-  .footer-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $hero-color;
-  }
-  .footer-objects {
+.footer-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $hero-color;
+  @media screen and (min-width: 1200px) {
     display: flex;
-    flex-direction: column;
-  }
-  /*footer-contacts*/
-  .adress {
-    font-style: normal;
-  }
-  .adress-objects {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .adress__item:not(:last-child) {
-    margin-bottom: 9px;
-  }
-  .adress__map {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
-  }
-  .adress__link {
-    color: $second-color;
-    transition: color $animation-timing-function $animation-duration;
-
-    &:hover,
-    &:focus {
-      color: $title-first-color;
-    }
-  }
-  /*footer-links*/
-  .footer-links__text {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
-  }
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
-  }
-  .footer-list:not(:last-child) {
-    margin-right: 10px;
-  }
-  .footer-list__icon {
-    width: 20px;
-    height: 20px;
-    transition: fill $animation-timing-function $animation-duration;
-
-    &:hover,
-    &:focus {
-      fill: $buttom-text-color;
-    }
-  }
-  .footer-list__link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    fill: $buttom-text-color;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color $animation-timing-function $animation-duration;
-
-    &:hover,
-    &:focus {
-      background-color: $title-first-color;
-    }
-  }
-  /*footer-form*/
-  .footer-form__title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
-  }
-  .footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .footer-form__label {
-    margin-bottom: 20px;
-    margin-right: 12px;
-  }
-  .footer-form__field {
-    padding: 15px 16px;
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-  }
-  .footer-form__field input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-  }
-  .footer-form__button {
-    display: flex;
-    align-items: center;
-    padding: 10px 29px;
-    width: 200px;
-    height: 50px;
-  }
-  .footer-form__icon {
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    fill: $buttom-text-color;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $hero-color;
+.footer-objects {
+  display: flex;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
-  .footer-objects {
-    display: flex;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  /*footer-contacts*/
-  .footer-contacts {
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+  }
+}
+/*footer-contacts*/
+.footer-contacts {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: inline-block;
     text-align: center;
   }
-  .adress {
-    font-style: normal;
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+  }
+}
+.adress {
+  font-style: normal;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 60px;
   }
-  .adress__item:not(:last-child) {
-    margin-bottom: 9px;
+}
+.adress-objects {
+  @media screen and (max-width: 767px) {
+    text-align: center;
+    margin-bottom: 60px;
   }
-  .adress__map {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
-  }
-  .adress__link {
-    color: $second-color;
-    transition: color $animation-timing-function $animation-duration;
+}
+.adress__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.adress__map {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $buttom-text-color;
+}
+.adress__link {
+  color: $second-color;
+  transition: color $animation-timing-function $animation-duration;
 
-    &:hover,
-    &:focus {
-      color: $title-first-color;
-    }
+  &:hover,
+  &:focus {
+    color: $title-first-color;
   }
-  /*footer-links*/
-  .footer-links {
+}
+/*footer-links*/
+.footer-links {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
   }
-  .footer-links__text {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: $buttom-text-color;
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
   }
-  .footer-social {
-    display: flex;
-    justify-content: center;
+}
+.footer-links__text {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: $buttom-text-color;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     align-items: center;
   }
-  .footer-list:not(:last-child) {
-    margin-right: 10px;
+  @media screen and (min-width: 1200px) {
+    align-items: center;
   }
-  .footer-list__icon {
-    width: 20px;
-    height: 20px;
-    transition: fill $animation-timing-function $animation-duration;
+}
+.footer-list:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-list__icon {
+  width: 20px;
+  height: 20px;
+  transition: fill $animation-timing-function $animation-duration;
 
-    &:hover,
-    &:focus {
-      fill: $buttom-text-color;
-    }
-  }
-  .footer-list__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    fill: $buttom-text-color;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color $animation-timing-function $animation-duration;
-
-    &:hover,
-    &:focus {
-      background-color: $title-first-color;
-    }
-  }
-  /*footer-form*/
-  .footer-form_block {
-    margin: 0 auto;
-  }
-  .footer-form__title {
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: $buttom-text-color;
-  }
-  .footer-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-form__label {
-    margin-bottom: 20px;
-  }
-  .footer-form__field {
-    padding: 15px 16px;
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
-  }
-  .footer-form__field input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-  }
-  .footer-form__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 29px;
-  }
-  .footer-form__icon {
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
+  &:hover,
+  &:focus {
     fill: $buttom-text-color;
   }
 }
-@media screen and (min-width: 1200px) {
-  .footer-section {
-    display: flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: $hero-color;
-  }
-  .footer-objects {
-    display: flex;
-    align-items: baseline;
-  }
-  /*footer-contacts*/
-  .footer-contacts {
-    flex-grow: 1;
-  }
-  .adress {
-    font-style: normal;
-  }
-  .adress__item:not(:last-child) {
-    margin-bottom: 9px;
-  }
-  .adress__map {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
-  }
-  .adress__link {
-    color: $second-color;
-    transition: color $animation-timing-function $animation-duration;
+.footer-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  fill: $buttom-text-color;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color $animation-timing-function $animation-duration;
 
-    &:hover,
-    &:focus {
-      color: $title-first-color;
-    }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
   }
-  /*footer-links*/
-  .footer-links {
-    margin-right: 93px;
+  &:hover,
+  &:focus {
+    background-color: $title-first-color;
   }
-  .footer-links__text {
+}
+/*footer-form*/
+.footer-form_block {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin: 0 auto;
+  }
+}
+.footer-form__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: $buttom-text-color;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+.footer-form {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+.footer-form__label {
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
   }
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer-list:not(:last-child) {
-    margin-right: 10px;
-  }
-  .footer-list__icon {
-    width: 20px;
-    height: 20px;
-    transition: fill $animation-timing-function $animation-duration;
-
-    &:hover,
-    &:focus {
-      fill: $buttom-text-color;
-    }
-  }
-  .footer-list__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    fill: $buttom-text-color;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color $animation-timing-function $animation-duration;
-
-    &:hover,
-    &:focus {
-      background-color: $title-first-color;
-    }
-  }
-  /*footer-form*/
-  .footer-form__title {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    color: $buttom-text-color;
   }
-  .footer-form {
-    display: flex;
-    align-items: center;
-  }
-  .footer-form__label {
+  @media screen and (min-width: 1200px) {
     margin-right: 12px;
   }
-  .footer-form__field {
-    padding: 15px 16px;
-    width: 358px;
+}
+.footer-form__field {
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+}
+.footer-form__field input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-form__button {
+  display: flex;
+  align-items: center;
+  padding: 10px 29px;
+
+  @media screen and (max-width: 767px) {
+    width: 200px;
     height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: transparent;
   }
-  .footer-form__field input::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
-  }
-  .footer-form__button {
-    display: flex;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     justify-content: center;
-    align-items: center;
-    padding: 10px 29px;
   }
-  .footer-form__icon {
-    margin-left: 10px;
-    width: 24px;
-    height: 24px;
-    fill: $buttom-text-color;
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
   }
+}
+.footer-form__icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: $buttom-text-color;
 }

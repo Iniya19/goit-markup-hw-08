@@ -1,67 +1,80 @@
-@media screen and (max-width: 767px) {
-  .hero {
-    text-align: center;
-    background-color: $hero-color;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 118px 0px;
+.hero {
+  text-align: center;
+  max-width: 1600px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 118px 0px;
+  background-color: $hero-color;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/mob/mobhead.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/mob/mobhead@2x.jpg);
   }
-  .hero__title {
-    margin-bottom: 30px;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.61;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $buttom-text-color;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 118px 0px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/tab/tabhead.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and(min-resolution: 2dppx) {
+      background-image: url(../images/tab/tabhead@2x.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    min-height: 600px;
+    padding: 200px 0px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/des/deshead.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (-webkit-min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and(min-resolution: 2dppx) {
+      background-image: url(../images/des/deshead@2x.jpg);
+    }
   }
 }
-@media screen and (min-width: 768px) {
-  .hero {
-    text-align: center;
-    background-color: $hero-color;
-    height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 118px 0px;
+.hero__title {
+  margin-bottom: 30px;
+  font-weight: 900;
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $buttom-text-color;
+  @media screen and (max-width: 767px) {
+    font-size: 26px;
+    line-height: 1.61;
   }
-  .hero__title {
-    margin-bottom: 30px;
-    font-weight: 900;
+  @media screen and (min-width: 768px) {
     font-size: 26px;
     line-height: 1.62;
     text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $buttom-text-color;
   }
   @media screen and (min-width: 1200px) {
-    .hero {
-      text-align: center;
-      background-color: $hero-color;
-      max-width: 1600px;
-      height: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 200px 0px;
-      background-image: linear-gradient(
-          rgba(47, 48, 58, 0.4),
-          rgba(47, 48, 58, 0.4)
-        ),
-        url(../images/Imghero.jpg);
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    .hero__title {
-      margin-bottom: 30px;
-      font-weight: 900;
-      font-size: 44px;
-      line-height: 1.36;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: $buttom-text-color;
-    }
+    font-size: 44px;
+    line-height: 1.36;
   }
 }

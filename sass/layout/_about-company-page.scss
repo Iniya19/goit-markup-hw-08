@@ -1,40 +1,44 @@
+.about-company__icon {
+  width: 70px;
+  height: 70px;
+}
+.about-company__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 120px;
+  background-color: $bcg-color;
+  border-radius: 4px;
+}
+.about-company__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $first-color;
+}
+.about-company__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $second-color;
+}
 @media screen and (max-width: 767px) {
   .about-company__item {
     &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
-  .about-company__icon {
-    width: 70px;
-    height: 70px;
-  }
   .about-company__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
     width: 450px;
-    height: 120px;
-    background-color: $bcg-color;
-    border-radius: 4px;
-  }
-  .about-company__title {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-align: center;
-    text-transform: uppercase;
-    color: $first-color;
   }
   .about-company__text {
     width: 450px;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: $second-color;
   }
 }
 @media screen and (min-width: 768px) {
@@ -52,38 +56,13 @@
       margin-bottom: 30px;
     }
   }
-  .about-company__icon {
-    width: 70px;
-    height: 70px;
-  }
   .about-company__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
     width: 354px;
-    height: 120px;
-    background-color: $bcg-color;
-    border-radius: 4px;
-  }
-  .about-company__title {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $first-color;
   }
   .about-company__text {
     width: 354px;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $second-color;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .about-company {
     display: flex;
@@ -93,34 +72,10 @@
       margin-right: 30px;
     }
   }
-  .about-company__icon {
-    width: 70px;
-    height: 70px;
-  }
   .about-company__box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
     width: 270px;
-    height: 120px;
-    background-color: $bcg-color;
-    border-radius: 4px;
-  }
-  .about-company__title {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: $first-color;
   }
   .about-company__text {
     width: 270px;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $second-color;
   }
 }
