@@ -603,17 +603,21 @@ a {
   .site-nav__item:not(:last-child) {
     margin-bottom: 32px;
   }
-  .site-nav__link,
-  .site-nav__link-current {
+  .site-nav__link {
     font-weight: 500;
     font-size: 40px;
     line-height: 47px;
     letter-spacing: 0.02em;
     color: #000000;
   }
-  .site-nav__link:hover, .site-nav__link:focus,
-  .site-nav__link-current:hover,
-  .site-nav__link-current:focus {
+  .site-nav__link:hover, .site-nav__link:focus {
+    color: #2196f3;
+  }
+  .site-nav__link-current {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
     color: #2196f3;
   }
   .contacts {
@@ -796,7 +800,7 @@ a {
     position: absolute;
     display: block;
     left: 0;
-    bottom: 0;
+    bottom: -6px;
     height: 4px;
     width: 100%;
     background-color: #2196f3;
@@ -855,18 +859,13 @@ a {
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
+  padding: 118px 0px;
   background-color: #2f303a;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/mob/mobhead.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob/mobhead.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-@media screen and (max-width: 767px) {
-  .hero {
-    padding: 118px 0px;
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/mob/mobhead.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mob/mobhead.jpg);
-  }
 }
 
 @media (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
@@ -1251,24 +1250,25 @@ a {
   background-color: #2196f3;
 }
 
-.our-cusromers {
+.our-customers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media screen and (max-width: 767px) {
-  .our-cusromers {
+  .our-customers {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: -15px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .our-cusromers {
+  .our-customers {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
@@ -1278,39 +1278,34 @@ a {
 }
 
 @media screen and (max-width: 767px) {
-  .our-cusromers__items {
-    width: calc((100%-60px) / 2);
-  }
-  .our-cusromers__items:nth-child(2n + 1) {
-    margin-right: 30px;
-  }
-  .our-cusromers__items:nth-child(2n + 1) {
-    margin-bottom: 30px;
+  .our-customers__items {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .our-cusromers__items {
-    width: 226px;
+  .our-customers__items {
+    width: 225px;
   }
-  .our-cusromers__items:not(:nth-child(3n)) {
+  .our-customers__items:not(:nth-child(3n)) {
     margin-right: 30px;
   }
-  .our-cusromers__items:nth-child(-n + 3) {
+  .our-customers__items:nth-child(-n + 3) {
     margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .our-cusromers__items {
+  .our-customers__items {
     width: 170px;
   }
-  .our-cusromers__items:not(:last-child) {
+  .our-customers__items:not(:last-child) {
     margin-right: 30px;
   }
 }
 
-.our-cusromers__link {
+.our-customers__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1328,12 +1323,12 @@ a {
   transition: fill cubic-bezier(0.4, 0, 0.2, 0) 250ms, border cubic-bezier(0.4, 0, 0.2, 0) 250ms;
 }
 
-.our-cusromers__link:hover, .our-cusromers__link:focus {
+.our-customers__link:hover, .our-customers__link:focus {
   fill: #2196f3;
   border: 1px solid #2196f3;
 }
 
-.our-cusromers__icons {
+.our-customers__icons {
   width: 106px;
   height: 60px;
 }
@@ -1760,6 +1755,9 @@ a {
 @media screen and (max-width: 767px) {
   .filter__item:nth-child(-n + 4) {
     margin-bottom: 15px;
+  }
+  .filter__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
   .filter__item:not(:last-child) {
     margin-right: 8px;

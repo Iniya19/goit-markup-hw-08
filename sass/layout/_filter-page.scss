@@ -19,6 +19,9 @@
   .filter__item:nth-child(-n + 4) {
     margin-bottom: 15px;
   }
+  .filter__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
   .filter__item:not(:last-child) {
     margin-right: 8px;
   }
