@@ -132,7 +132,7 @@
   }
   .social-mobile {
     display: flex;
-    padding: 0px 40px;
+    padding: 0px 40px 48px 40px;
   }
   .social-mobile_item:not(:first-child) {
     padding-right: 10px;
@@ -143,6 +143,10 @@
     padding-right: 10px;
   }
   .social-mobile_link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
     color: $title-first-color;
   }
 }
@@ -202,11 +206,13 @@
     letter-spacing: 0.02em;
     list-style-type: none;
   }
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   .contacts__link {
     display: flex;
     align-items: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
     color: $second-color;
     transition: color $animation-duration $animation-timing-function;
 

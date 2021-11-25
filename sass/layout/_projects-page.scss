@@ -10,7 +10,7 @@
 }
 .projects__item {
   @media screen and (max-width: 767px) {
-    &:not(last-child) {
+    &:not(:last-child) {
       margin-bottom: 30px;
     }
   }
